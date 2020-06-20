@@ -15,6 +15,8 @@ The following instructions source the components from their public sources, whic
 restrictions or you are using your own equipment.
 We expect that you have the skills to drive your operating system, find files, move files, etc.
 
+## Table of Contents
+
 1. [License](#1.-license)
 2. [Required Components](#2.-required-components)
 3. [Install a Web Browsers](#3.-install-a-web-browsers)
@@ -60,11 +62,12 @@ provides the information your orignaization administrators will need to configur
 ## 3. Check Web Browser
 
 We recommend using Chrome for the class, but you can substitute Firefox or possibly Edge Chromium
-(Selenium 3 does not support it well) if you need to.
+if you need to (Selenium 3 does not support Edge Chromium well).
 These are the only three browsers that support Selenium IDE, so you must have at least one of them.
 
 You should use a recent version of the browser.
-Chrome, Firefox, and Edge Chromium all keep themselves up to date.
+Chrome, Firefox, and Edge Chromium all update themselves, so
+unless updates are blocked you should already be up-to-date.
 If you are concerned about your current version you can compare the "about" information
 (use the *Help &rarr; About* or *[Browser Name] &rarr; About* menu item) of
 your browser to the current release information here:
@@ -83,9 +86,10 @@ If you need to install a browser, download it these links and run the installati
 |Mozilla Firefox|https://mozilla.org/firefox|
 |Microsoft Edge Chromium|https://microsoft.com/edge|
 
-If you are installing a new browser for the class it *does not* have to be made your "default" browser.
-Set up the configuration during the install how you choose: copy settings, etc.
-It is not relevant for the course.
+If you are installing a new browser for the class it *does NOT* have to be made your "default" browser.
+All of the browsers run through a configuration step during the install, and you may
+configure your browser however you choose to: copy settings, etc.
+It is not relevant for this course.
 
 ## 4. Check Network Connectivity
 The labs require the Node.js and Maven repositories. If you are using your own computer or your employer does have internal versions of these repositories for software development, please make sure that you can reach the following three URLs without errors (the content displayed for each link in the browser is irrelevant, you just need to reach them without an error):
@@ -94,7 +98,8 @@ The labs require the Node.js and Maven repositories. If you are using your own c
 * https://registry.npmjs.com
 * https://repo.maven.apache.org
 
-If you employer uses internal repositories they will provide you with the setup for Node.js and Maven to reach them.
+If you employer uses internal repositories they will provide you with the setup for Node.js and your
+integrated development environment to reach them.
 
 ## 5. Install Selenium IDE
 
@@ -149,7 +154,6 @@ and your version numbers may vary):
 
 If you do not have Node.js or you have an old version, download and run the installer.
 Administrative access is required to run the installer.
-After installing Node.js run the two commands again to make sure the installation is correct.
 
 #### 6.1.1 Set PATH for MacOS
 
@@ -169,7 +173,7 @@ This file contains a top level directory, in this case *node-v12.18.1-linux-x64*
 ![](.common/node-linux-tar.png?raw=true)
 
 Extract the directory in this file to ~/Node, where ~ is your home directory.
-Add the following line to the .bashrc file in your home directory to allow *node* and *npm* to be found (change the name
+Add the following line to the .bashrc file in your home directory to allow *node* and *npm* to be found (change the pathname
 to match the Node.js folder that you installed):
 
 > export PATH=$PATH:~/Node/node-v12.18.1-linux-x64
@@ -181,20 +185,21 @@ blog post to install a user-private version: -->
 
 ## 7. Install Selenium Command-line Runner and Web Drivers
 
-The Selenium command line runner is a program will automate Selenium IDE tests and allow them to be provisioned as part
+The Selenium command line runner is a program that will automate Selenium IDE tests and allow them to be provisioned as part
 of a software development pipeline, e.g. DevOps CI/CD.
 The command line runner depends on a web driver, a program that communicates with a web browser.
 There is a different web driver for each web browser.
 
 The command line runner and web drivers are installed using *npm* (the Node Package Manager).
-In a terminal (command) window, install the command line runner with ($ is the prompt):
+In a terminal (command) window, use this command to install the command line runner ($ is the prompt):
 
 > $ npm install -g selenium-side-runner<br/>
 
-There may be warning messages caused by older versions of dependencies, it is safe to ignore these.
-What happens is that when a newer version of a package is published, npm may warn you about issues in the older version.
-However, the older version is what we need because what we are installing has not been updated yet.
-Such is life, you get the warnings.
+There may be warning messages about some dependencies, it is safe to ignore these.
+These are caused by older dependencies that have been replaced, but the selenium command line runner
+still depends on them.
+Such is life.
+Someday someone may update Selenium, but for now you get the warnings.
 
 Check that the command line runner is installed by running the following command (your version may vary):
 
@@ -202,7 +207,7 @@ Check that the command line runner is installed by running the following command
 > 3.17.0<br/>
 
 Install the driver (or drivers) appropriate for the web browsers you plan on using.
-Pick one or more, we recommend the chromedriver because we recommended Google Chrome previously in step 3:
+Pick one or more, we recommend the chromedriver because we recommended Chrome previously in step 3:
 
 > $ npm install -g chromedriver<br/>
 > $ npm install -g gekodriver<br/>
@@ -233,7 +238,7 @@ Administrative access is required to run the installer.
 
 It is important to know the filesystem path to the JDK so that you can configure it in your integrated development environment.
 These are where the JDK is located on your system, your version number may be different.
-Look for your JDK now and make a note of the filesystem path to it is on your computer:
+Look for your JDK now and make a note of the filesystem path to it on your computer:
 
 |Operating System|Location|
 |---|---|
@@ -270,8 +275,8 @@ When you run the installer select the first option, *Eclipse IDE for Java Develo
 
 ![](.common/eclipse-installer.png?raw=true)
 
-On the next screen, select the filesystem path to the JDK installed in step 8.
-If it does not show in the list, click on the file icon and go find it:
+On the next screen for the "Java 1.8+" field, select the filesystem path to the JDK installed in step 8.
+If it does not appear in the list, click on the file icon and go find it:
 
 ![](.common/eclipse-jdk.png?raw=true)
 

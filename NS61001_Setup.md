@@ -45,7 +45,7 @@ The lab framework code is licensed under the MIT license. The corresponding cour
 
 * Microsoft Windows, Apple MacOS, or Linux, 64-bit, 8GB of memory recommended
 * Google Chrome, Mozilla Firefox, or Microsoft Edge Chromium (Edge may require Selenium 4 in Java)
-* Node.js version 10+
+* Node.js current LTS version
 * Selenium IDE and WebDriver for the browser selected
 * Java Development Kit version 8+
 * IntelliJ IDEA Community or Professional IDE, or Eclipse IDE

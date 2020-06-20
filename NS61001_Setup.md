@@ -19,26 +19,23 @@ We expect that you have the skills to drive your operating system, find files, m
 
 1. [License](#1.-license)
 2. [Required Components](#2.-required-components)
-3. [Install a Web Browsers](#3.-install-a-web-browsers)
+3. [Check Web Browser](#3.-check-web-browser)
 4. [Check Network Connectivity](#4.-check-network-connectivity)
 5. [Install Selenium IDE](#5.-install-selenium-ide)
-    - 5.1 [Google Chrome and Microsoft Edge Chromium](#5.1-google-chrome-and-microsoft-edge-chromium)
-    - 5.2 [Mozilla Firefox](#5.2-mozilla-firefox)
+    - 5.1 [Chrome and Edge Chromium](#5.1-chrome-and-edge-chromium)
+    - 5.2 [Firefox](#5.2-firefox)
     - 5.3 [Check Selenium IDE](#5.3-check-selenium-ide)
 6. [Install Node.js](#6.-install-node.js)
-7. [Install Selenium Command-line Runner and Web Driver](#7.-install-selenium-command-line-runner-and-web-driver)
+    - 6.1 [Install Node.js for Windows and MacOS](#6.1-install-node.js-for-windows-and-macos)
+    - 6.2 [Install Node.js for Linux](#6.2-install-node.js-for-linux)
+7. [Install Selenium Command-line Runner and Web Drivers](#7.-install-selenium-command-line-runner-and-web-drivers)
 8. [Install the Java Development Kit](#8.-install-the-java-development-kit)
-9. [Installing an IDE](#9.-install-an-ide)
+9. [Install an IDE](#9.-install-an-ide)
     - 9.1 [IntelliJ IDEA](#9.1-intellij-idea)
     - 9.2 [Eclipse](#9.2-eclipse)
-        - 9.2.1 [Use the Eclipse Installer](#9.2.1-use-the-eclipse-installer)
-        - 9.2.2 [Install Eclipse Manually](#9.2.2-install-eclipse-manually)
 10. [Dependencies for Enterprise Publication](#10.-dependencies-for-enterprise-publication-for-(enterprise-administrators)) (for enterprise administrators)
     - 10.1 [Node.js Packages](#10.1-node.js-packages)
     - 10.2 [Maven Artifacts](#10.2-maven-artifacts)
-        - 10.2.1 [General Artifacts](#10.2.1-general-artifacts)
-        - 10.2.2 [Selenium 3 Artifacts](#10.2.2-selenium-3-artifacts)
-        - 10.2.3 [Selenium 4 Artifacts](#10.2.3-selenium-4-artifacts)
 
 ## 1. License
 
@@ -115,7 +112,7 @@ Visit https://google.com/chrome/webstore. Search for “Selenium IDE” and inst
 
 If you are using Edge, you will need to authorize Edge to use the Google Chrome webstore by clicking a button at the top of the browser window where it prompts you for this.
 
-### 5.2 Mozilla Firefox
+### 5.2 Firefox
 
 Visit https://addons.mozilla.org, search for “Selenium IDE”, and then install it:
 

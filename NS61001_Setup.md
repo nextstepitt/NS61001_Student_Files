@@ -334,3 +334,6 @@ The Maven pom.xml files include these specific versions:
 |org.seleniumhq.selenium|[htmlunit-driver](https://search.maven.org/search?q=a:webdriver-selenium)|2.41.0|
 
 1: The Selenium 4 alpha dependency is included in case the class uses with Selenium 4 instead of Selenium 3. Microsoft Edge Chromium drivers are included with Selenium 4. Edge Chromium may be used with Selenium 3 but the class participants will have to jump through some hoops: https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium?tabs=c-sharp.
+
+<hr>
+Copyright © 2020 NextStep IT Training. All rights reserved.

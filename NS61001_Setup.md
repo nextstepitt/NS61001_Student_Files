@@ -2,7 +2,7 @@
 
 # NS61001 Java-based Testing with Selenium - Setup Instructions
 
-## Revision History
+### Revision History
 
 June 19th, 2020
 

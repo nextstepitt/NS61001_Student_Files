@@ -13,9 +13,8 @@ If you are using your employer's equipment please first check your employer’s 
 You may have restrictions on what software you may install, and your employer may have specific setup instructions for installation.
 In that case, follow your employer's instructions to install the software components listed below in "Required Components".
 
-The following instructions source the components from their public sources, which is fine if your employer has no
-restrictions or you are using your own equipment.
-We expect that you have the skills to drive your operating system, find files, move files, etc.
+The following instructions source the components from their public sources.
+This is the route to take if you are using your own equipment or your employer has no restrictions.
 
 ## Table of Contents
 

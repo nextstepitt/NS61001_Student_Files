@@ -1,4 +1,4 @@
-<!-- ![](.common/nsbanner.png?raw=true) -->
+![](.common/nsbanner.png?raw=true)
 
 # NS61001 Java-based Testing with Selenium - Mac OS Setup Instructions
 
@@ -115,5 +115,5 @@ Congratulations, you have completed the setup!<br/>
 <br/>
 ![](.common/stop_small.png?raw=true)
 
-<!-- <hr>
-Copyright © 2020 NextStep IT Training. All rights reserved. -->
+<hr>
+Copyright © 2020 NextStep IT Training. All rights reserved.

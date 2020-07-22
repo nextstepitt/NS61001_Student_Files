@@ -1,0 +1,56 @@
+{
+  "id": "2bb27b6a-d3e7-4444-8ded-1d0c0f84ea22",
+  "version": "2.0",
+  "name": "scratch",
+  "url": "https://amazon.com",
+  "tests": [{
+    "id": "849873f8-20b5-49a3-8354-a453893e824c",
+    "name": "Show shopping cart",
+    "commands": [{
+      "id": "6b298903-1aab-411b-867d-3dec785e9e0e",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24034669-b3c3-4584-9746-fe7dc4c9deb3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1000x800",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f120933-31ff-44a5-838c-c2900e91bac7",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=nav-cart-count",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "ee83c1ad-125e-482a-a4e3-a1d17f9a5743",
+      "comment": "",
+      "command": "click",
+      "target": "id=nav-cart-count",
+      "targets": [
+        ["id=nav-cart-count", "id"],
+        ["css=#nav-cart-count", "css:finder"],
+        ["xpath=//span[@id='nav-cart-count']", "xpath:attributes"],
+        ["xpath=//a[@id='nav-cart']/span[4]", "xpath:idRelative"],
+        ["xpath=//span[4]", "xpath:position"],
+        ["xpath=//span[contains(.,'0')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "97e293ea-d16a-44d9-92fb-255246682310",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["849873f8-20b5-49a3-8354-a453893e824c"]
+  }],
+  "urls": ["https://amazon.com/"],
+  "plugins": []
+}

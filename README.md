@@ -63,7 +63,7 @@ NS61001_Student_Files
 ```
 
 * We recommend that you put the content under ~/Student_Files, where ~ is your home directory.
-* If you download a zip file GitHub will name the root folder *NS61001_Student_Files-master*, if you want to you can remove the *-master*.
+* If you download a zip file GitHub will name the root folder *NS61001_Student_Files-master*. If you want to you can remove the *-master*, but it does not really matter.
 * Each lab folder has a number and a name, to remind you of what the lab was about.
 * The Labs folder is an empty space to do your work.
 * Generally you can always copy the solution of the previous lab as the starting point for a lab.

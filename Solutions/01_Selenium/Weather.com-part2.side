@@ -1,0 +1,101 @@
+{
+  "id": "ca5f6f64-0992-466e-b1ce-d7684fcac696",
+  "version": "2.0",
+  "name": "Weather.com",
+  "url": "https://weather.com",
+  "tests": [{
+    "id": "18dc73df-e008-4c88-be49-11bb334e30f1",
+    "name": "Correct city displayed",
+    "commands": [{
+      "id": "d2a21176-fd2f-4ea2-a16d-35da41e901bc",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9824a856-cccb-4528-b18d-469b6a6b87a7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "955x571",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98152ee3-c8e2-4799-a85e-d2338ae3a214",
+      "comment": "",
+      "command": "waitForElementEditable",
+      "target": "id=LocationSearch_input",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "cbc3e745-118a-48c7-94fb-ac898ca4dec2",
+      "comment": "",
+      "command": "click",
+      "target": "id=LocationSearch_input",
+      "targets": [
+        ["id=LocationSearch_input", "id"],
+        ["css=#LocationSearch_input", "css:finder"],
+        ["xpath=//input[@id='LocationSearch_input']", "xpath:attributes"],
+        ["xpath=//div[@id='WxuHeaderLargeScreen-header-9944ec87-e4d4-4f18-b23e-ce4a3fd8a3ba']/header/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07a47609-f13e-4b56-83ad-b6b98ef5673e",
+      "comment": "",
+      "command": "type",
+      "target": "id=LocationSearch_input",
+      "targets": [
+        ["id=LocationSearch_input", "id"],
+        ["css=#LocationSearch_input", "css:finder"],
+        ["xpath=//input[@id='LocationSearch_input']", "xpath:attributes"],
+        ["xpath=//div[@id='WxuHeaderLargeScreen-header-9944ec87-e4d4-4f18-b23e-ce4a3fd8a3ba']/header/div/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Miami"
+    }, {
+      "id": "6e42121c-5acb-44be-8b31-0da3d53cb156",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=LocationSearch_listbox-0",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "2c9887a6-d862-463e-8996-06dc29d75a97",
+      "comment": "",
+      "command": "click",
+      "target": "id=LocationSearch_listbox-0",
+      "targets": [
+        ["id=LocationSearch_listbox-0", "id"],
+        ["css=#LocationSearch_listbox-0", "css:finder"],
+        ["xpath=//button[@id='LocationSearch_listbox-0']", "xpath:attributes"],
+        ["xpath=//div[@id='LocationSearch_listbox']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Miami, FL')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70dee2ad-a57f-4b78-bc9e-f5474c9577c7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.\\_-_-components-src-organism-CurrentConditions-CurrentConditions--location--1YWj_",
+      "targets": [
+        ["css=.\\_-_-components-src-organism-CurrentConditions-CurrentConditions--location--1YWj_", "css:finder"],
+        ["xpath=//div[@id='WxuCurrentConditions-main-b3094163-ef75-4558-8d9a-e35e6b9b1034']/div/section/div/div/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Miami, FL Weather')]", "xpath:innerText"]
+      ],
+      "value": "Miami, FL Weather"
+    }]
+  }],
+  "suites": [{
+    "id": "da506161-b0b3-4157-9dc8-6dc666b5138f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://weather.com/"],
+  "plugins": []
+}

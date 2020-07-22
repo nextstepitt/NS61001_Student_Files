@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{/style/application.css}" />
+</head>
+<body>
+    <div th:replace="shared/header :: header"></div>
+    <div th:replace="shared/navigation :: navigation"></div>
+
+    <div class="app-content">
+        <h2>Cart Items</h2>
+        <table>
+            <thead></thead>
+            <tbody>
+            <tr th:each="item: ${salesOrderItems}">
+                <td th:text="${item.name}" />
+                <td th:text="${item.price}" />
+            </tr>
+            <tr th:if="${salesOrder}">
+                <td>Total:</td>
+                <td><span th:text="${salesOrderTotal}" /></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button th:if="${salesOrderItems}" th:data-link="@{/checkout}" onclick="location = this.getAttribute('data-link')">Checkout</button>
+    </div>
+
+    <div th:replace="shared/footer :: footer"></div>
+</body>
+</html>

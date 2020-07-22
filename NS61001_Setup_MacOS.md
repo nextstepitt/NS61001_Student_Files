@@ -61,8 +61,11 @@ Selenium supports the current long-term-support (LTS) version of Node.
 > export PATH=$PATH:/usr/local/bin
 
 6. Save and close the \emph{.bashrc} file.
-7. Launch a new terminal window.
-8. Check Node by running the following commands ($ is the prompt, your versions may be different):
+7. Launch a new terminal window and run the following command to fix npm global installations ($ is the prompt):
+
+> $ sudo chown -R $USER /usr/local/lib/node_modules
+
+8. Check Node by running the following commands, your versions of Node.js and npm may be different):
 
 > $ node -v<br/>
 > v12.18.1<br/>

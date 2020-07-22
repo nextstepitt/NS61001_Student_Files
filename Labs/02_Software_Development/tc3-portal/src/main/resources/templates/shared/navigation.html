@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--navigation.html
+    Copyright © 2018-2020 NextStep IT Training. All rights reserved.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+</head>
+<html>
+    <div th:fragment="navigation" class="navigation">
+        <script th:src="@{/scripts/jquery-3.5.1.min.js}"></script>
+        <script th:src="@{/scripts/navigation.js}"></script>
+        <div class="navigation-bar">
+            <div class="navigation-left">
+                <button class="navbutton" th:data-link="@{/}" onclick="location = this.getAttribute('data-link')">HOME</button>
+                <button class="navbutton" th:data-link="@{/menu}" onclick="location = this.getAttribute('data-link')">MENU</button>
+                <button class="navbutton" th:data-link="@{/cart}" onclick="location = this.getAttribute('data-link')">CART</button>
+            </div>
+            <div class="navigation-right">
+                <button th:if="${session?.username == null}" class="navbutton" th:data-link="@{/login}" onclick="location = this.getAttribute('data-link')">LOGIN</button>
+                <button id="profile-button" th:if="${session?.username != null}" class="navbutton">Welcome <span th:text="${session?.username}" /></button>
+                <div class="profile-menu">
+                    <button class="navbutton" th:data-link="@{/profile}" onclick="console.log('here'); location = this.getAttribute('data-link')">PROFILE</button><br>
+                    <button class="navbutton" th:data-link="@{/logout}" onclick="location = this.getAttribute('data-link')">LOGOUT</button>
+                </div>
+            </div>
+            <div class="clear-all"></div>
+        </div>
+    </div>
+</html>

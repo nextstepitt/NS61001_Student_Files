@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--index.html
+    Copyright © 2018-2020 NextStep IT Training. All rights reserved.
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{/style/application.css}" />
+    <script th:src="@{/scripts/jquery-3.5.1.min.js}"></script>
+    <script th:src="@{/scripts/index.js}"></script>
+</head>
+<body>
+    <header th:replace="shared/header :: header"></header>
+    <nav th:replace="shared/navigation :: navigation"></nav>
+
+    <div class="center">
+        <div class="app-content">
+            <div class="center"><p class="page-title" th:text="${greeting} + ', welcome to the Caribbean Coffee Company!'" /></div>
+            <div class="bar">
+                <div class="bar-text">
+                    <p class="section-title">Free coffee after your first online order!</p>
+                    <p>You can order online and have your coffee waiting when you arrive. And if you make a new account,
+                        your next online coffee will be on us! So what are you waiting for? Go ahead and register for that
+                        free cup of Java.</p>
+                    <p>Wait, Java is an island isn't it? We might have a volcano. Or maybe not. But we're in the Caribbean!</p>
+                    <button class="form-field" th:data-link="@{/register}" onclick="location = this.getAttribute('data-link');">Create a New Account</button>
+                </div>
+                <div class="bar-image">
+                    <img class="bar-image" th:src="@{/images/coffee-to-go.png}" alt="coffee to go" />
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="bar-image">
+                    <img class="bar-image" th:src="@{/images/beach-tables.png}" alt="Always open!" />
+                </div>
+                <div class="bar-text">
+                    <p class="section-title">Always Open!</p>
+                    <p>Yep, that's right, we are open from midnight to midnight.
+                        Any time you want coffee or pastries or
+                        just the company of good friends we are going to be here for you.</p>
+                    <p>So come on down to the beach
+                        and enjoy a cup of the island's best coffee!
+                        If you can find us...</p>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-image">
+                    <img id="location-image" class="bar-image" alt="Somewhere in the Caribbean..." />
+                </div>
+                <div class="bar-text">
+                    <p class="section-title">Somewhere in the Caribbean...</p>
+                    <p>...on an island, or maybe not. On a beach, with tables and palm trees in the sand,
+                        you'll find perfectly brewed coffee,
+                        delicious pastries, and the company of your friends.</p>
+                    <p>But first you'll have to find us!</p>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="bar-text">
+                    <p class="section-title">Only the best coffee!</p>
+                    <p>So we can't tell you where our coffee comes from, because then you'll get it from someone else!
+                        But we can tell you that it's grown on a mountain.
+                        And packed out on a donkey. By a man
+                        who may or may not be named Juan Valdez.</p>
+                </div>
+                <div class="bar-image">
+                    <img class="bar-image" th:src="@{/images/coffee-beans.png}" alt="Only the best coffee!" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="shared/footer :: footer"></footer>
+    <section th:replace="shared/init :: init"></section>
+</body>
+</html>

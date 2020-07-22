@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{/style/application.css}" />
+</head>
+<body>
+    <div th:replace="shared/header :: header"></div>
+    <div th:replace="shared/navigation :: navigation"></div>
+
+    <div class="app-content">
+        <h2>Order Checkout</h2>
+        <div th:if="${cardCcvParseError}">
+            <span class="error">Invalid expiration date</span><br>
+        </div>
+        <div th:if="${cardExpiredParseError}">
+            <span class="error">Invalid expiration date</span><br>
+        </div>
+        <div th:if="${cardDeclined}">
+            <span class="error">Card declined</span><br>
+        </div>
+        <table>
+            <thead></thead>
+            <tbody>
+            <tr th:each="item: ${salesOrderItems}">
+                <td th:text="${item.name}" />
+                <td th:text="${item.price}" />
+            </tr>
+            <tr th:if="${salesOrder}">
+                <td>Total:</td>
+                <td><span th:text="${salesOrderTotal}" /></td>
+            </tr>
+            <tr>
+                <td>Card Holder Name:</td>
+                <td><input name="cardHolderName" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Card Number:</td>
+                <td><input name="cardNumber" type="text" /></td>
+            </tr>
+            <tr>
+                <td>Card Expires:</td>
+                <td><input name="cardExpires" type="text" /></td>
+            </tr>
+            <tr>
+                <td>CCV:</td>
+                <td><input name="ccv" type="text" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Pay" /></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div th:replace="shared/footer :: footer"></div>
+</body>
+</html>

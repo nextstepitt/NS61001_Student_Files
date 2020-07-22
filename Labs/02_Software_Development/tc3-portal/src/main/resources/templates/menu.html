@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{/style/application.css}" />
+</head>
+<body>
+    <div th:replace="shared/header :: header"></div>
+    <div th:replace="shared/navigation :: navigation"></div>
+
+    <div class="app-content">
+        <h2>Pastries</h2>
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr th:each="product: ${pastries}">
+                    <td th:text="${product.name}" />
+                    <td th:text="${product.price}" />
+                    <td><button th:data-link="|@{/cart/}${product.productId}|" onclick="location = this.getAttribute('data-link')">Add to cart</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Beverages</h2>
+        <table>
+            <thead></thead>
+            <tbody>
+            <tr th:each="product: ${beverages}">
+                <td th:text="${product.name}" />
+                <td th:text="${product.price}" />
+                <td><button th:data-link="|@{/cart/}${product.productId}|" onclick="location = this.getAttribute('data-link')">Add to cart</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div th:replace="shared/footer :: footer"></div>
+</body>
+</html>

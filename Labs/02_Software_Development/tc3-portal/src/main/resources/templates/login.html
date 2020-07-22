@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{/style/application.css}" />
+</head>
+<body>
+    <div th:replace="shared/header :: header"></div>
+    <div th:replace="shared/navigation :: navigation"></div>
+
+    <div class="app-content">
+        <div class="login-form">
+            <form method="post" th:action="@{/login}">
+                <div th:if="${error}">
+                    <span class="error">Bad login name or password</span><br>
+                </div>
+                <input type="text" name="username" class="login" th:value="${username}" /><br>
+                <p class="login">Username</p>
+                <input type="password" name="password" class="login" /><br>
+                <p class="login">Password</p>
+                <div class="center">
+                    <input type="submit" class="login" value="Login" />&nbsp;&nbsp;
+                    <input type="button" class="login" value="Cancel" th:data-link="@{/}" onclick="location = this.getAttribute('data-link');" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div th:replace="shared/footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>The Caribbean Coffee Company</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" th:href="@{/style/application.css}" />
+</head>
+<body>
+<div th:replace="shared/header :: header"></div>
+<div th:replace="shared/navigation :: navigation"></div>
+
+<div class="app-content">
+    <form method="post" action="">
+        <div th:if="${errorPassword}">
+            <span class="error">Passwords do not match</span><br>
+        </div>
+        <div th:if="${errorSave}">
+            <span class="error">Could not save profile</span><br>
+        </div>
+        <input type="hidden" name="customerId" th:value="${profile?.customerId}" />
+        <table>
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <th class="form-title">First Name</th>
+                    <td class="form-field"><input name="firstName" type="text" th:value="${profile?.firstName}" class="form-field" /></td>
+                </tr>
+                <tr>
+                    <th class="form-title">Last Name</th>
+                    <td class="form-field"><input name="lastName" type="text" th:value="${profile?.lastName}" class="form-field" /></td>
+                </tr>
+                <tr>
+                    <th class="form-title">Email Name</th>
+                    <td class="form-field"><input name="email" type="text" th:value="${profile?.email}" class="form-field" /></td>
+                </tr>
+                <tr>
+                    <th class="form-title">Username</th>
+                    <td class="form-field"><input name="login" type="text" th:value="${profile?.login}" class="form-field" /></td>
+                </tr>
+                <tr>
+                    <th class="form-title"><span th:if="${profile?.customerId}" th:text="New" /> Password</th>
+                    <td class="form-field"><input name="password" type="password" th:value="${profile?.password}" class="form-field" /></td>
+                </tr>
+                <tr>
+                    <th class="form-title">Confirm Password</th>
+                    <td class="form-field"><input name="confirmPassword" type="password" th:value="${profile?.confirmPassword}" class="form-field" /></td>
+                </tr>
+                <tr>
+                    <th class="form-title"></th>
+                    <td class="form-field"><input type="submit" value="Submit" />&nbsp;<input type="button" value="Cancel" th:data-link="@{/}" th:onclick="location = this.getAttribute('data-link')" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+<div th:replace="shared/footer :: footer"></div>
+</body>
+</html>
